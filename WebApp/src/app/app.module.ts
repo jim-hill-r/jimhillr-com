@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { GumbyModule } from './gumby/gumby.module';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    GumbyModule,
     BrowserModule
   ],
   providers: [],
