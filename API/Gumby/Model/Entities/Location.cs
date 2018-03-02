@@ -1,5 +1,5 @@
 ﻿
-namespace JimHill.API.Gumby.Models
+namespace JimHill.API.Gumby.Model.Entities
 {
     public class Location
     {

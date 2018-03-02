@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-using JimHill.API.Gumby.Models;
 using JimHill.API.Gumby.Persistance;
 
 namespace jimhillr_com

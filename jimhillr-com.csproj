@@ -48,6 +48,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="API\Gumby\Model\Aggregations\" />
+    <Folder Include="API\Gumby\Model\Connections\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

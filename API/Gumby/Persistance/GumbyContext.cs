@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using JimHill.API.Gumby.Models;
+using JimHill.API.Gumby.Model.Entities;
 
 namespace JimHill.API.Gumby.Persistance
 {
