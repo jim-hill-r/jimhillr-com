@@ -29,12 +29,7 @@ namespace JimHill
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc(routes =>
-            {
-                routes.MapSpaFallbackRoute(
-                name: "spa-fallback",
-                defaults: new { controller = "Fallback", action = "Index" });
-            });
+            app.UseMvc();
 
             app.UseSwagger();
 
