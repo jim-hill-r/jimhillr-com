@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-using JimHill.API.Gumby.Model.Entities;
-using JimHill.API.Gumby.Persistance;
+using JimHill.Gumby.Persistance;
+using JimHill.Gumby.Persistance.Model.Entities;
 
-namespace JimHill.API.Gumby.Controllers
+namespace JimHill.Gumby.API.Controllers
 {
     [Route("api/v0/gumby/[controller]")]
     public class RouteController : Controller 

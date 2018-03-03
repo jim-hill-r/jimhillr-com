@@ -48,8 +48,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="API\Gumby\Model\Aggregations\" />
-    <Folder Include="API\Gumby\Model\Connections\" />
+    <Folder Include="Gumby\API\DTO\" />
+    <Folder Include="Gumby\App\Android\" />
+    <Folder Include="Gumby\App\IPhone\" />
+    <Folder Include="Gumby\App\Common\" />
+    <Folder Include="Gumby\App\Web\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

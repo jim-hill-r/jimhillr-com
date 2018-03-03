@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-using JimHill.API.Gumby.Model.Entities;
-using JimHill.API.Gumby.Persistance;
+using JimHill.Gumby.Persistance;
+using JimHill.Gumby.Persistance.Model.Entities;
 
-namespace JimHill.API.Gumby.Controllers
+namespace JimHill.Gumby.API.Controllers
 {
     [Route("api/v0/gumby/[controller]")]
     public class ClimberController : Controller 
@@ -31,7 +31,7 @@ namespace JimHill.API.Gumby.Controllers
             return this._context.Climbers.ToList();
         }
 
-        [HttpGet("{id}", Name = "GetById")]
+        [HttpGet("{id}", Name = "[controller]GetById")]
         public IActionResult GetById(long id)
         {
             Climber climber = this._context.Climbers.FirstOrDefault<Climber>(c => c.Id.Equals(id));
@@ -55,7 +55,7 @@ namespace JimHill.API.Gumby.Controllers
             this._context.Climbers.Add(climber);
             this._context.SaveChanges();
 
-            return CreatedAtRoute("GetById", new { id = climber.Id }, climber);
+            return CreatedAtRoute("[controller]GetById", new { id = climber.Id }, climber);
         }
 
         [HttpPut("{id}")]

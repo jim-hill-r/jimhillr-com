@@ -1,5 +1,5 @@
 ﻿
-namespace JimHill.API.Gumby.Model.Entities
+namespace JimHill.Gumby.Persistance.Model.Entities
 {
     public class Climber
     {
