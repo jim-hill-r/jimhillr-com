@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 using JimHill.Gumby.Persistance;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace JimHill
 {
@@ -14,6 +15,11 @@ namespace JimHill
         {
             services.AddDbContext<GumbyContext>(opt => opt.UseInMemoryDatabase("Gumby"));
             services.AddMvc();
+
+            services.AddSwaggerGen(opt =>
+            {
+                opt.SwaggerDoc("v0", new Info { Title = "Jim Hill API", Version = "v0" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -25,7 +31,15 @@ namespace JimHill
             
             app.UseDefaultFiles();
             app.UseStaticFiles();
+
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(opt =>
+            {
+                opt.SwaggerEndpoint("/swagger/v0/swagger.json", "Jim Hill API v0");
+            });
         }
     }
 }
