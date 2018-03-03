@@ -28,11 +28,13 @@ namespace JimHill
             {
                 app.UseDeveloperExceptionPage();
             }
-            
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapSpaFallbackRoute(
+                name: "spa-fallback",
+                defaults: new { controller = "Fallback", action = "Index" });
+            });
 
             app.UseSwagger();
 
@@ -40,6 +42,11 @@ namespace JimHill
             {
                 opt.SwaggerEndpoint("/swagger/v0/swagger.json", "Jim Hill API v0");
             });
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+            
         }
     }
 }
