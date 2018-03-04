@@ -9,7 +9,7 @@ using JimHill.Gumby.Persistance.Model.Entities;
 
 namespace JimHill.Gumby.API.Controllers
 {
-    [Route("api/v0/gumby/[controller]")]
+    [Route("api/v0/[controller]")]
     public class LocationController : Controller 
     {
         private readonly GumbyContext _context;

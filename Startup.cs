@@ -18,7 +18,7 @@ namespace JimHill
 
             services.AddSwaggerGen(opt =>
             {
-                opt.SwaggerDoc("v0", new Info { Title = "Jim Hill API", Version = "v0" });
+                opt.SwaggerDoc("v0", new Info { Title = "Gumby API", Version = "v0" });
             });
         }
 
@@ -31,11 +31,15 @@ namespace JimHill
 
             app.UseMvc();
 
-            app.UseSwagger();
+            app.UseSwagger(opt =>
+            {
+                opt.RouteTemplate = "api/{documentName}/swagger.json";
+            });
 
             app.UseSwaggerUI(opt =>
             {
-                opt.SwaggerEndpoint("/swagger/v0/swagger.json", "Jim Hill API v0");
+                opt.SwaggerEndpoint("/api/v0/swagger.json", "Gumby API v0");
+                opt.RoutePrefix = "api";
             });
 
             app.UseDefaultFiles();
