@@ -1,7 +1,27 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to Project Gumby!
-  </h1>
-</div>
+<mat-sidenav-container class="sidebar-container">
+  <mat-sidenav #sidenav mode="over">
+    <mat-card> Learn </mat-card>
+    <mat-card> Achievements </mat-card>
+    <mat-card> Locations </mat-card>
+    <mat-card> Routes </mat-card>
+    <mat-card> Friends </mat-card>
+  </mat-sidenav>
 
-<router-outlet></router-outlet>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span> <button mat-icon-button (click)="sidenav.toggle()"> <mat-icon>menu</mat-icon> </button> </span>
+      <span> Gumby </span>
+      <span class="search-area">
+        <mat-form-field color="primary" class="search-bar">
+          <span matPrefix> <button mat-icon-button><mat-icon>search</mat-icon></button></span>
+          <input matInput placeholder="Search" />
+        </mat-form-field>
+      </span>
+      <span> <button mat-icon-button><mat-icon>face</mat-icon></button> </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <div class="fill-page"> </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

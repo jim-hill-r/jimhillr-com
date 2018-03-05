@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="API\DTO\" />
+    <Folder Include="AppServer\" />
     <Folder Include="Security\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
