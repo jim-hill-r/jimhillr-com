@@ -11,6 +11,7 @@ export class GumbyComponent {
     { title: 'Home', url: '/', icon: 'home' },
     { title: 'Profile', url: '/profile', icon: 'face' },
     { title: 'Friends', url: '/friends', icon: 'spa' },
+    { title: 'Events', url: '/events', icon: 'event'},
     { title: 'Routes', url: '/routes', icon: 'terrain' },
     { title: 'Locations', url: '/locations', icon: 'store' },
     { title: 'Terminology', url: '/terminology', icon: 'book' },
