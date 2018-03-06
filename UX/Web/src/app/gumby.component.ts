@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GumbyComponent {
 
-  private menuItems: MenuItem[] = [
+  public menuItems: MenuItem[] = [
     { title: 'Home', url: '/', icon: 'home' },
     { title: 'Profile', url: '/profile', icon: 'face' },
     { title: 'Friends', url: '/friends', icon: 'spa' },
@@ -16,9 +16,9 @@ export class GumbyComponent {
     { title: 'Terminology', url: '/terminology', icon: 'book' },
     { title: 'Download App', url: '/download', icon: 'file_download'}
   ];
-  private activeMenuItem: MenuItem = this.menuItems[0];
+  public activeMenuItem: MenuItem = this.menuItems[0];
 
-  private changeSection(menuItem: MenuItem) {
+  public changeSection(menuItem: MenuItem) {
     this.activeMenuItem = menuItem;
   }
 }

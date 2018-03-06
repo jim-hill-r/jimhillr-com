@@ -5,4 +5,6 @@ export class Activity {
   route: string;
   comments: string;
   timestamp: Date;
+  photo: string;
+  location: string;
 }

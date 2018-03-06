@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home.component';
 
+import { GumbyCommonModule } from '../common/gumby-common.module';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +21,8 @@ import { ActivityInputComponent } from './components/activity-input.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
+
+    GumbyCommonModule,
 
     MatButtonModule,
     MatCardModule,

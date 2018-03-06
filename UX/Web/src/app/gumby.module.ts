@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { GumbyCommonModule } from './common/gumby-common.module';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -19,6 +20,8 @@ import { GumbyComponent} from './gumby.component';
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
+
+    GumbyCommonModule,
 
     MatButtonModule,
     MatCardModule,
