@@ -1,0 +1,7 @@
+<mat-card style="text-align:center">
+  <button mat-button (click)="addClimb()"> Add a climb </button>
+</mat-card>
+
+<span *ngFor="let activity of activities">
+  <activity [activity]="activity"></activity>
+</span>

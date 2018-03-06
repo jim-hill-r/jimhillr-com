@@ -13,4 +13,10 @@
   bottom: 0;
   left: 0;
   right: 0;
+  
+}
+
+.sidebar {
+  color: white;
+  background-color: #3f51b5;
 }
