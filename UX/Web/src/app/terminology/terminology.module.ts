@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { TerminologyRoutingModule } from './terminology-routing.module';
+import { TerminologyComponent } from './components/terminology.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -11,14 +11,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { GumbyRoutingModule } from './gumby-routing.module';
-import { GumbyComponent} from './gumby.component';
+import { TerminologyService } from './services/terminology-service';
 
 @NgModule({
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     CommonModule,
+    TerminologyRoutingModule,
 
     MatButtonModule,
     MatCardModule,
@@ -27,10 +25,10 @@ import { GumbyComponent} from './gumby.component';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-
-    GumbyRoutingModule
   ],
-  declarations: [ GumbyComponent ],
-  bootstrap: [ GumbyComponent ]
+  declarations: [TerminologyComponent],
+  providers: [
+    TerminologyService
+  ]
 })
-export class GumbyModule { }
+export class TerminologyModule { }

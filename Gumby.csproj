@@ -13,6 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="UX\Web\src\app\terminology\model\mocks\term-mock.ts" />
+    <None Remove="UX\Web\src\app\terminology\model\term.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.2.0" />
   </ItemGroup>
@@ -21,7 +26,15 @@
     <Folder Include="API\DTO\" />
     <Folder Include="AppServer\" />
     <Folder Include="Security\" />
+    <Folder Include="UX\Web\src\app\terminology\services\interfaces\" />
+    <Folder Include="UX\Web\src\app\terminology\services\mocks\" />
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="UX\Web\src\app\terminology\model\mocks\term-mock.ts" />
+    <TypeScriptCompile Include="UX\Web\src\app\terminology\model\term.ts" />
+    <TypeScriptCompile Include="UX\Web\src\app\terminology\services\terminology-service.ts" />
   </ItemGroup>
 
 </Project>
