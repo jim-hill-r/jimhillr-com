@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using JimHill.Gumby.Persistance.Model.Entities;
+using JimHill.Gumby.Persistance.Relational.Model;
 
-namespace JimHill.Gumby.Persistance
+namespace JimHill.Gumby.Persistance.Relational
 {
     public class GumbyContext : DbContext
     {

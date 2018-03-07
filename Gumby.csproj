@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="API\DTO\" />
     <Folder Include="AppServer\" />
     <Folder Include="Security\" />
     <Folder Include="UX\Web\src\app\terminology\services\interfaces\" />

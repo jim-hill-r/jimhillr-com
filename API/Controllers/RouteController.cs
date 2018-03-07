@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-using JimHill.Gumby.Persistance;
-using JimHill.Gumby.Persistance.Model.Entities;
+using JimHill.Gumby.Persistance.Relational;
+using JimHill.Gumby.Persistance.Relational.Model;
 
 namespace JimHill.Gumby.API.Controllers
 {
@@ -17,12 +17,6 @@ namespace JimHill.Gumby.API.Controllers
         public RouteController(GumbyContext context)
         {
             this._context = context;
-
-            if(this._context.Routes.Count().Equals(0))
-            {
-                this._context.Routes.Add(new Route { Name = "Route1" });
-                this._context.SaveChanges();
-            }
         }
 
         [HttpGet]

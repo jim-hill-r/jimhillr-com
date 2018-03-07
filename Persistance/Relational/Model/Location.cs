@@ -1,25 +1,25 @@
 ﻿
-namespace JimHill.Gumby.Persistance.Model.Entities
-{
-    public class Route
+namespace JimHill.Gumby.Persistance.Relational.Model
+{ 
+    public class Location
     {
         public long Id { get; set; }
         public string Name { get; set; }
 
         public bool IsComplete()
         {
-            if(this.Name == null)
+            if (this.Name == null)
             {
                 return false;
             }
             return true;
         }
 
-        public void Update(Route route)
+        public void Update(Location location)
         {
-            if(route.Name != null)
+            if (location.Name != null)
             {
-                this.Name = route.Name;
+                this.Name = location.Name;
             }
         }
     }

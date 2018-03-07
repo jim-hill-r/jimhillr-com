@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-using JimHill.Gumby.Persistance;
+using JimHill.Gumby.Persistance.Relational;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace JimHill
