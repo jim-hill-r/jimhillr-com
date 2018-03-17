@@ -1,8 +1,0 @@
-<mat-card style="text-align:center">
-  <button mat-button (click)="addClimb()"> Add a climb </button>
-</mat-card>
-
-<span *ngFor="let activity of activities; let i = index">
-  <activity [activity]="activity"></activity>
-  <ad *ngIf="i%10==0"> </ad>
-</span>

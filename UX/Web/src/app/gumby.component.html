@@ -18,7 +18,18 @@
           <input matInput placeholder="Search" />
         </mat-form-field>
       </span>
-      <span> <button mat-icon-button><mat-icon>face</mat-icon></button> </span>
+      <span>
+        <button mat-icon-button [matMenuTriggerFor]="kabobMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </span>
+      <mat-menu #kabobMenu="matMenu">
+        <mat-nav-list class="kabob-menu">
+          <mat-list-item *ngFor="let menuItem of kabobMenuItems" class="kabob-menu">
+            <a [routerLink]="menuItem.url" (click)="changeSection(menuItem)"> {{menuItem.title}} </a>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-menu>
     </mat-toolbar>
     <router-outlet></router-outlet>
     <div class="fill-page"> </div>

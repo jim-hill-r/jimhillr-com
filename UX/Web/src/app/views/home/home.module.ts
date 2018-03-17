@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeViewComponent } from './home-view.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -12,14 +12,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { GumbyRoutingModule } from './gumby-routing.module';
-import { GumbyComponent} from './gumby.component';
+import { ActivityService } from '../../services/activity-service';
+import { ActivityComponent } from './subcomponents/activity.component';
+import { CreateActivityComponent } from './subcomponents/create-activity.component';
+import { AdvertisementComponent } from '../../components/advertisment/advertisement.component';
+
+import { FriendsModule } from '../friends/friends.module';
 
 @NgModule({
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     CommonModule,
+    HomeRoutingModule,
 
     MatButtonModule,
     MatCardModule,
@@ -30,9 +33,16 @@ import { GumbyComponent} from './gumby.component';
     MatSidenavModule,
     MatToolbarModule,
 
-    GumbyRoutingModule
+    FriendsModule
   ],
-  declarations: [ GumbyComponent ],
-  bootstrap: [ GumbyComponent ]
+  declarations: [
+    HomeViewComponent,
+    ActivityComponent,
+    CreateActivityComponent,
+    AdvertisementComponent
+  ],
+  providers: [
+    ActivityService
+  ]
 })
-export class GumbyModule { }
+export class HomeModule { }

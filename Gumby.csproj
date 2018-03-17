@@ -7,14 +7,81 @@
 
   <ItemGroup>
     <Compile Remove="Tests\**" />
+    <Compile Remove="UX\Web\src\app\common\**" />
+    <Compile Remove="UX\Web\src\app\views\download\model\**" />
+    <Compile Remove="UX\Web\src\app\views\download\services\**" />
+    <Compile Remove="UX\Web\src\app\views\events\model\**" />
+    <Compile Remove="UX\Web\src\app\views\events\services\**" />
+    <Compile Remove="UX\Web\src\app\views\friends\model\**" />
+    <Compile Remove="UX\Web\src\app\views\friends\services\**" />
+    <Compile Remove="UX\Web\src\app\views\home\services\interfaces\**" />
+    <Compile Remove="UX\Web\src\app\views\home\services\mocks\**" />
+    <Compile Remove="UX\Web\src\app\views\locations\model\**" />
+    <Compile Remove="UX\Web\src\app\views\locations\services\**" />
+    <Compile Remove="UX\Web\src\app\views\notfound\model\**" />
+    <Compile Remove="UX\Web\src\app\views\notfound\services\**" />
+    <Compile Remove="UX\Web\src\app\views\profile\model\**" />
+    <Compile Remove="UX\Web\src\app\views\profile\services\**" />
+    <Compile Remove="UX\Web\src\app\views\routes\components\**" />
+    <Compile Remove="UX\Web\src\app\views\routes\model\**" />
+    <Compile Remove="UX\Web\src\app\views\routes\services\**" />
     <Content Remove="Tests\**" />
+    <Content Remove="UX\Web\src\app\common\**" />
+    <Content Remove="UX\Web\src\app\views\download\model\**" />
+    <Content Remove="UX\Web\src\app\views\download\services\**" />
+    <Content Remove="UX\Web\src\app\views\events\model\**" />
+    <Content Remove="UX\Web\src\app\views\events\services\**" />
+    <Content Remove="UX\Web\src\app\views\friends\model\**" />
+    <Content Remove="UX\Web\src\app\views\friends\services\**" />
+    <Content Remove="UX\Web\src\app\views\home\services\interfaces\**" />
+    <Content Remove="UX\Web\src\app\views\home\services\mocks\**" />
+    <Content Remove="UX\Web\src\app\views\locations\model\**" />
+    <Content Remove="UX\Web\src\app\views\locations\services\**" />
+    <Content Remove="UX\Web\src\app\views\notfound\model\**" />
+    <Content Remove="UX\Web\src\app\views\notfound\services\**" />
+    <Content Remove="UX\Web\src\app\views\profile\model\**" />
+    <Content Remove="UX\Web\src\app\views\profile\services\**" />
+    <Content Remove="UX\Web\src\app\views\routes\components\**" />
+    <Content Remove="UX\Web\src\app\views\routes\model\**" />
+    <Content Remove="UX\Web\src\app\views\routes\services\**" />
     <EmbeddedResource Remove="Tests\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\common\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\download\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\download\services\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\events\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\events\services\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\friends\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\friends\services\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\home\services\interfaces\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\home\services\mocks\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\locations\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\locations\services\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\notfound\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\notfound\services\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\profile\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\profile\services\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\routes\components\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\routes\model\**" />
+    <EmbeddedResource Remove="UX\Web\src\app\views\routes\services\**" />
     <None Remove="Tests\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="UX\Web\src\app\terminology\model\mocks\term-mock.ts" />
-    <None Remove="UX\Web\src\app\terminology\model\term.ts" />
+    <None Remove="UX\Web\src\app\common\**" />
+    <None Remove="UX\Web\src\app\views\download\model\**" />
+    <None Remove="UX\Web\src\app\views\download\services\**" />
+    <None Remove="UX\Web\src\app\views\events\model\**" />
+    <None Remove="UX\Web\src\app\views\events\services\**" />
+    <None Remove="UX\Web\src\app\views\friends\model\**" />
+    <None Remove="UX\Web\src\app\views\friends\services\**" />
+    <None Remove="UX\Web\src\app\views\home\services\interfaces\**" />
+    <None Remove="UX\Web\src\app\views\home\services\mocks\**" />
+    <None Remove="UX\Web\src\app\views\locations\model\**" />
+    <None Remove="UX\Web\src\app\views\locations\services\**" />
+    <None Remove="UX\Web\src\app\views\notfound\model\**" />
+    <None Remove="UX\Web\src\app\views\notfound\services\**" />
+    <None Remove="UX\Web\src\app\views\profile\model\**" />
+    <None Remove="UX\Web\src\app\views\profile\services\**" />
+    <None Remove="UX\Web\src\app\views\routes\components\**" />
+    <None Remove="UX\Web\src\app\views\routes\model\**" />
+    <None Remove="UX\Web\src\app\views\routes\services\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,15 +92,14 @@
   <ItemGroup>
     <Folder Include="AppServer\" />
     <Folder Include="Security\" />
-    <Folder Include="UX\Web\src\app\terminology\services\interfaces\" />
-    <Folder Include="UX\Web\src\app\terminology\services\mocks\" />
+    <Folder Include="UX\Web\src\app\components\advertisment\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="UX\Web\src\app\terminology\model\mocks\term-mock.ts" />
-    <TypeScriptCompile Include="UX\Web\src\app\terminology\model\term.ts" />
-    <TypeScriptCompile Include="UX\Web\src\app\terminology\services\terminology-service.ts" />
+    <TypeScriptCompile Include="UX\Web\src\mocks\term-mock.ts" />
+    <TypeScriptCompile Include="UX\Web\src\app\model\term.ts" />
+    <TypeScriptCompile Include="UX\Web\src\app\services\terminology-service.ts" />
   </ItemGroup>
 
 </Project>

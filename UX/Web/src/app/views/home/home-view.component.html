@@ -1,0 +1,13 @@
+<mat-card style="text-align:center">
+  <span class="comments-area">
+  <mat-form-field class="comments-bar">
+    <input matInput placeholder="What have you been up to?" />
+  </mat-form-field>
+    </span>
+  <button mat-button (click)="addClimb()"> Add a climb </button>
+</mat-card>
+
+<span *ngFor="let activity of activities; let i = index">
+  <activity [activity]="activity"></activity>
+  <advertisement *ngIf="i%10==0"> </advertisement>
+</span>

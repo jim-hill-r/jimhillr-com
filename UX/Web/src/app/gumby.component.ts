@@ -9,13 +9,18 @@ export class GumbyComponent {
 
   public menuItems: MenuItem[] = [
     { title: 'Home', url: '/', icon: 'home' },
-    { title: 'Profile', url: '/profile', icon: 'face' },
     { title: 'Friends', url: '/friends', icon: 'spa' },
     { title: 'Events', url: '/events', icon: 'event'},
     { title: 'Routes', url: '/routes', icon: 'terrain' },
     { title: 'Locations', url: '/locations', icon: 'store' },
     { title: 'Terminology', url: '/terminology', icon: 'book' },
+    { title: 'Ratings', url: '/rating', icon: 'graph' },
     { title: 'Download App', url: '/download', icon: 'file_download'}
+  ];
+  public kabobMenuItems: MenuItem[] = [
+    { title: 'Login', url: '/login', icon: 'login' },
+    { title: 'Profile', url: '/profile', icon: 'face' },
+    { title: 'About', url: '/about', icon: 'about' }
   ];
   public activeMenuItem: MenuItem = this.menuItems[0];
 
