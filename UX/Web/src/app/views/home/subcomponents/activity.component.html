@@ -1,34 +1,28 @@
 <mat-card>
-  <p>
-    {{activity.comments}}
-  </p>
   <mat-card-subtitle>
-    {{activity.timestamp}}
+    {{activity.timestamp | date:'medium'}}
   </mat-card-subtitle>
   <mat-card-content>
-    <div *ngIf="activity.route">
-      We climbed {{activity.route}}
-    </div>
-    <div *ngIf="activity.climber">
-      Climber: {{activity.climber}}
-    </div>
-    <div *ngIf="activity.belayer">
-      Belayer: {{activity.belayer}}
+    <div id="comments">
+      <div *ngIf="edit" style="text-align:center">
+          <span class="comments-area">
+            <mat-form-field class="comments-bar">
+              <input matInput placeholder="What have you been up to?" />
+            </mat-form-field>
+          </span>
+          <button mat-button (click)="saveActivity()"> SHARE </button>
+      </div>
+      <div *ngIf="!edit">
+        <p>
+          {{activity.comments}}
+        </p>
+      </div>
     </div>
 
+    <div *ngFor="let detail of activity.details">
+      <div id="climb" *ngIf="detail.type == 'CLIMB'">
+        <climb [id]="detail.id" [edit]="edit"> </climb>
+      </div>
+    </div>
   </mat-card-content>
-  <mat-card-footer>
-
-    <button mat-button *ngIf="!activity.photo"> Add a photo </button>
-    <button mat-button *ngIf="!activity.location"> Add a location </button>
-    <button mat-button *ngIf="!activity.route"> Add a route </button>
-    <button mat-button *ngIf="!activity.climber"> Add a climber </button>
-    <mat-menu #belayerMenu="matMenu">
-      <button mat-menu-item> Sam Claassens </button>
-      <button mat-menu-item> New...</button>
-    </mat-menu>
-    <button mat-button *ngIf="!activity.belayer" [matMenuTriggerFor]="belayerMenu"> Add a belayer </button>
-    <button mat-button *ngIf="!activity.comments"> Add comments </button>
-    <button mat-button> Remove </button>
-  </mat-card-footer>
 </mat-card>

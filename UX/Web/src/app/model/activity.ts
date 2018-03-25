@@ -1,6 +1,8 @@
+import { ActivityDetail } from './activityDetail';
+
 export class Activity {
   id: number;
-  timestamp: Date;
+  timestamp: Date;  
   comments: string;
-  type: string;
+  details: ActivityDetail[];
 }

@@ -13,11 +13,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { ActivityService } from '../../services/activity-service';
-import { ActivityComponent } from './subcomponents/activity.component';
-import { CreateActivityComponent } from './subcomponents/create-activity.component';
-import { AdvertisementComponent } from '../../components/advertisment/advertisement.component';
+import { ClimbService } from '../../services/climb-service';
+import { ClimberService } from '../../services/climber-service';
+import { RouteService } from '../../services/route-service';
+import { LocationService } from '../../services/location-service';
 
-import { FriendsModule } from '../friends/friends.module';
+import { ActivityComponent } from './subcomponents/activity.component';
+import { ClimbComponent } from './subcomponents/climb.component';
+import { RouteComponent } from './subcomponents/route.component';
+import { AdvertisementComponent } from '../../components/advertisment/advertisement.component';
 
 @NgModule({
   imports: [
@@ -31,18 +35,22 @@ import { FriendsModule } from '../friends/friends.module';
     MatListModule,
     MatMenuModule,
     MatSidenavModule,
-    MatToolbarModule,
+    MatToolbarModule
 
-    FriendsModule
   ],
   declarations: [
     HomeViewComponent,
     ActivityComponent,
-    CreateActivityComponent,
+    ClimbComponent,
+    RouteComponent,
     AdvertisementComponent
   ],
   providers: [
-    ActivityService
+    ActivityService,
+    ClimbService,
+    ClimberService,
+    RouteService,
+    LocationService
   ]
 })
 export class HomeModule { }

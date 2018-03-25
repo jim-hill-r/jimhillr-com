@@ -91,6 +91,7 @@
 
   <ItemGroup>
     <Folder Include="AppServer\" />
+    <Folder Include="Persistance\Cosmos\" />
     <Folder Include="Security\" />
     <Folder Include="UX\Web\src\app\components\advertisment\" />
     <Folder Include="wwwroot\" />

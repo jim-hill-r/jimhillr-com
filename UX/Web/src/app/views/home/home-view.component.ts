@@ -28,8 +28,4 @@ export class HomeViewComponent {
     );
   }
 
-  addClimb(): void {
-    this.activityService.createActivity().subscribe(activity => this.activities.splice(0,0,activity));
-  }
-
 }

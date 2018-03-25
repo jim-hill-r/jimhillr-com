@@ -9,6 +9,7 @@ export class GumbyComponent {
 
   public menuItems: MenuItem[] = [
     { title: 'Home', url: '/', icon: 'home' },
+    { title: 'Recommendations', url: '/recommendations', icon: 'star'},
     { title: 'Friends', url: '/friends', icon: 'spa' },
     { title: 'Events', url: '/events', icon: 'event'},
     { title: 'Routes', url: '/routes', icon: 'terrain' },

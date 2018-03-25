@@ -1,8 +1,7 @@
 export class Climb {
   id: number;
-  climber: string;
-  belayer: string;
-  route: string;
-  photo: string;
-  location: string;
+  activity: number;
+  climber: number; // Climber id
+  belayer: number; // Climber id
+  route: number; // Route id
 }

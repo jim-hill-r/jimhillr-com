@@ -11,9 +11,10 @@ export class ActivityService {
 
   constructor() { }
 
-  createActivity(): Observable<Activity> {
-    let newActivity = new Activity();
+  saveActivity(activity: Activity): Observable<Activity> {
+    let newActivity = activity;
     newActivity.timestamp = new Date();
+    ACTIVITIES_MOCK.splice(0, 0, newActivity);
     return of(newActivity);
   }
 

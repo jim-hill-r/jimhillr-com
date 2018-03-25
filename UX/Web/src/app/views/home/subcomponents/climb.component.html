@@ -1,0 +1,33 @@
+  <mat-card-subtitle>
+    Climb Details
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div *ngIf="climb.climber">
+      Climber: {{climber.nickname}} ({{climber.firstName}} {{climber.lastName}})
+    </div>
+    <div *ngIf="climb.belayer">
+      Belayer: {{belayer.nickname}} ({{belayer.firstName}} {{belayer.lastName}})
+    </div>
+    <div *ngIf="climb.route">
+      <route [id]="climb.route" [edit]="edit"></route>
+    </div>
+
+  </mat-card-content>
+  <mat-card-footer *ngIf="edit">
+    <button mat-button *ngIf="!climb.location"> Add a location </button>
+    <mat-menu #routeMenu="matMenu">
+      <button mat-menu-item *ngFor="let route of routes"> {{route.name}} </button>
+      <button mat-menu-item> Search...</button>
+    </mat-menu>
+    <button mat-button *ngIf="!climb.route" [matMenuTriggerFor]="climberMenu"> Find route </button>
+    <mat-menu #climberMenu="matMenu">
+      <button mat-menu-item *ngFor="let friend of friends"> {{friend.nickname}} ({{friend.firstName}} {{friend.lastName}}) </button>
+      <button mat-menu-item> Invite...</button>
+    </mat-menu>
+    <button mat-button *ngIf="!climb.climber" [matMenuTriggerFor]="climberMenu"> Who climbed </button>
+    <mat-menu #belayerMenu="matMenu">
+      <button mat-menu-item *ngFor="let friend of friends"> {{friend.nickname}} ({{friend.firstName}} {{friend.lastName}}) </button>
+      <button mat-menu-item> Invite...</button>
+    </mat-menu>
+    <button mat-button *ngIf="!climb.belayer" [matMenuTriggerFor]="belayerMenu"> Who belayed </button>
+  </mat-card-footer>
