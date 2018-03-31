@@ -15,9 +15,10 @@ export class GumbyComponent {
     { title: 'Routes', url: '/routes', icon: 'terrain' },
     { title: 'Locations', url: '/locations', icon: 'store' },
     { title: 'Terminology', url: '/terminology', icon: 'book' },
-    { title: 'Ratings', url: '/rating', icon: 'graph' },
+    { title: 'Ratings', url: '/rating', icon: 'equalizer' },
     { title: 'Download App', url: '/download', icon: 'file_download'}
   ];
+
   public kabobMenuItems: MenuItem[] = [
     { title: 'Login', url: '/login', icon: 'login' },
     { title: 'Profile', url: '/profile', icon: 'face' },

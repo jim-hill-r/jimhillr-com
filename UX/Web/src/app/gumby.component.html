@@ -1,10 +1,11 @@
 <mat-sidenav-container class="sidebar-container">
   <mat-sidenav #sidenav mode="over" class="sidebar">
     <mat-nav-list class="sidebar">
-        <mat-list-item *ngFor="let menuItem of menuItems" class="sidebar">
-          <mat-icon matListIcon>{{menuItem.icon}}</mat-icon>
-          <a [routerLink]="menuItem.url" (click)="changeSection(menuItem)"> {{menuItem.title}} </a>
-        </mat-list-item>
+      <mat-list-item *ngFor="let menuItem of menuItems" class="sidebar" [routerLink]="menuItem.url" (click)="changeSection(menuItem)">
+        
+          <mat-icon matListIcon>{{menuItem.icon}}</mat-icon> &nbsp; {{menuItem.title}}
+        
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
 

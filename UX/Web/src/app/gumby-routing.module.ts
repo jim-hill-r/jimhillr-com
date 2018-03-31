@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './views/home/home.module#HomeModule' },
+  { path: 'login', loadChildren: './views/login/login.module#LoginModule' },
   { path: 'profile', loadChildren: './views/profile/profile.module#ProfileModule' },
+  { path: 'about', loadChildren: './views/about/about.module#AboutModule' },
   { path: 'friends', loadChildren: './views/friends/friends.module#FriendsModule' },
   { path: 'events', loadChildren: './views/events/events.module#EventsModule' },
   { path: 'routes', loadChildren: './views/routes/routes.module#RoutesModule' },

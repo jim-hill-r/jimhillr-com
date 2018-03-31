@@ -13,7 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { GumbyRoutingModule } from './gumby-routing.module';
-import { GumbyComponent} from './gumby.component';
+import { GumbyComponent } from './gumby.component';
 
 @NgModule({
   imports: [
@@ -32,7 +32,9 @@ import { GumbyComponent} from './gumby.component';
 
     GumbyRoutingModule
   ],
-  declarations: [ GumbyComponent ],
+  declarations: [
+    GumbyComponent
+  ],
   bootstrap: [ GumbyComponent ]
 })
 export class GumbyModule { }

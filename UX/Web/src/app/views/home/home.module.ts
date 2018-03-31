@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeViewComponent } from './home-view.component';
 
+import { GumbyCommonModule } from '../../components/gumby-common.module';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,12 +23,13 @@ import { LocationService } from '../../services/location-service';
 import { ActivityComponent } from './subcomponents/activity.component';
 import { ClimbComponent } from './subcomponents/climb.component';
 import { RouteComponent } from './subcomponents/route.component';
-import { AdvertisementComponent } from '../../components/advertisment/advertisement.component';
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
+
+    GumbyCommonModule,
 
     MatButtonModule,
     MatCardModule,
@@ -37,13 +40,14 @@ import { AdvertisementComponent } from '../../components/advertisment/advertisem
     MatSidenavModule,
     MatToolbarModule
 
+
+
   ],
   declarations: [
     HomeViewComponent,
     ActivityComponent,
     ClimbComponent,
-    RouteComponent,
-    AdvertisementComponent
+    RouteComponent
   ],
   providers: [
     ActivityService,

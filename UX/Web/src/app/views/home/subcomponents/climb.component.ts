@@ -16,10 +16,10 @@ export class ClimbComponent {
     private climberService: ClimberService
   ) {}
 
-  private climb: Climb;
-  private climber: Climber;
-  private belayer: Climber;
-  private friends: Climber[];
+  public climb: Climb;
+  public climber: Climber;
+  public belayer: Climber;
+  public friends: Climber[];
 
   @Input() edit: boolean = false;
 

@@ -3,3 +3,7 @@
     Hello climber! Here you can find events and competitions in your local area. You can also sponsor online events and challenges to climb with your friends even when you can't make it to the rock!
   </h1>
 </div>
+<span *ngFor="let event of events; let i = index">
+  <event [event]="event"></event>
+  <advertisement *ngIf="i%10==0"> </advertisement>
+</span>

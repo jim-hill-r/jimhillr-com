@@ -16,8 +16,8 @@ export class RouteComponent {
     private locationService: LocationService
   ) {}
 
-  private route: Route;
-  private location: Location;
+  public route: Route;
+  public location: Location;
 
   @Input() edit: boolean = false;
 
